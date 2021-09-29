@@ -1,0 +1,6 @@
+- name: Synchronization rpmbuld using rsync protocol
+  ansible.posix.synchronize:
+    mode: pull
+    src: rsync://repos.pip2scl.dk/usr/share/nginx/html/
+    dest: /root/rpmbuild
+  become: True
