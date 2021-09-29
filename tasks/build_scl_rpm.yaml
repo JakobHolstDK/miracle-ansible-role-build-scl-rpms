@@ -6,7 +6,15 @@
     group: root
     mode: '0600'
 
+- name: Copy key file to root
+  shell: cp /home/vagrant/scldistro /root/.ssh/id_rsa
 
+- name: Set permissions
+  ansible.builtin.file:
+    path: /root/.ssh/id_rsa
+    owner: root
+    group: root
+    mode: '0600'
 
 - name: Synchronization rpmbuld using rsync protocol
   ansible.posix.synchronize:
