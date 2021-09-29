@@ -1,3 +1,8 @@
+-name: Copy config to builder root .ssh
+ copy:
+   src: 
+
+
 - name: Synchronization rpmbuld using rsync protocol
   ansible.posix.synchronize:
     mode: pull
