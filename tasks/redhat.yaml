@@ -25,6 +25,7 @@
     state: present
   with_items:
     - "git"
+    - "rsync"
     - "python3-pip"
     - "python3-devel"
     - "python3-setuptools-wheel"
