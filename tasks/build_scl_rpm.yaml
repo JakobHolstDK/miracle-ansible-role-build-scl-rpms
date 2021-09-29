@@ -1,6 +1,11 @@
--name: Copy config to builder root .ssh
- copy:
-   src: 
+- name: Copy file config to root ssh
+  ansible.builtin.copy:
+    src: config
+    dest: /root/.ssh/config
+    owner: root
+    group: root
+    mode: '0600'
+
 
 
 - name: Synchronization rpmbuld using rsync protocol
