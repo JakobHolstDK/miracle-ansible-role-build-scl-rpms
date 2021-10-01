@@ -43,6 +43,7 @@
     - "scl-utils"
     - "libffi-devel"
     - "createrepo"
+    - "yum-utils"
 
 - name: create dir
   ansible.builtin.file:
